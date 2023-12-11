@@ -1,0 +1,174 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{epsfig}
+\usepackage{times}
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+\renewcommand{\textfraction}{0.0}
+\setlength {\textwidth}{6.6in}
+\hoffset=-1.0in
+\oddsidemargin=1.00in
+\marginparsep=0.0in
+\marginparwidth=0.0in                                                                               
+\setlength {\textheight}{9.0in}
+\voffset=-1.00in
+\topmargin=1.0in
+\headheight=0.0in
+\headsep=0.00in
+\footskip=0.50in                                         
+\setcounter{page}{1}
+\begin{document}
+\def\pos{\medskip\quad}
+\def\subpos{\smallskip \qquad}
+\newfont{\nice}{cmr12 scaled 1250}
+\newfont{\name}{cmr12 scaled 1080}
+\newfont{\swell}{cmbx12 scaled 800}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     DO NOT CHANGE ANYTHING ABOVE THIS LINE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     DO NOT CHANGE ANYTHING ABOVE THIS LINE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     DO NOT CHANGE ANYTHING ABOVE THIS LINE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+{\large
+PHYSICS  20323: Scientific Analysis \& Modeling - Fall 2023
+}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\large Project: Vandy Golestani}\\\vskip0.25in
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section Heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent {\bf PROJECT INFORMATION:} \\
+
+This laboratory report presents the implementation of a Python program to simulate the radioactive decay process of Radon-222 (Rn-222) and its subsequent decay chain, culminating in the generation of a decay plot. The simulation models the decay of 20,000 initial atoms over a specified time, allowing for the examination of each isotope's contribution to the overall decay process.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section Heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vskip0.1in
+\noindent {\bf PURPOSE:} \\
+
+The primary objective of this project is to gain insights into the temporal evolution of a radioactive decay chain and to visualize the changing populations of each isotope involved. By employing a computational approach, we aim to observe how the decay of Radon-222 leads to the formation of various daughter isotopes, each with its unique half-life and decay characteristics. This simulation facilitates a comprehensive understanding of the interplay between decay rates and branching ratios in complex decay processes.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bullet Point & Numbered list - lists can also be nested as below
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section Heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vskip0.1in
+\noindent {\bf PROCEDURE:} \\
+
+1. Initialization:
+
+Define initial conditions, such as the number of atoms (20,000 in this case) and the half-lives of each isotope in the decay chain.
+Specify branching ratios, which describe the probability of decay from one isotope to another.
+
+2. Simulation:
+
+Employ a numerical method to iteratively calculate the decay of each isotope over time.
+Utilize the exponential decay formula to determine the decayed atoms for each time step.
+Update the atom counts for each isotope based on the decay and branching ratios.
+Repeat the process until all atoms have decayed or a predetermined simulation time is reached.
+
+3. Visualization:
+
+Utilize the matplotlib library to generate a decay plot.
+Plot the number of atoms for each isotope against time, providing a visual representation of the decay process.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage % inserts a page break
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figures can be inserted
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\noindent {\bf ANALYSIS (and math):} \\
+
+Mathematical Formulation:
+The simulation is based on the principles of exponential decay and branching ratios. The exponential decay formula is expressed as:
+
+N(t)=Ni*e^-lambda*t
+
+where N(t) is the number of atoms at time t,
+Ni is the initial number of atoms,
+lambda is the decay constant, calculated as ln(2)/half-life,
+and t is time.
+
+To account for branching ratios, the decayed atoms from one isotope contribute to the subsequent isotopes according to the specified probabilities. The simulation uses a numerical method to iteratively update atom counts over discrete time steps.
+
+
+Graphical Representation:
+The resulting decay plot visually demonstrates the progression of each isotope over time. The distinctive slopes and patterns on the graph reflect the unique decay characteristics of Radon-222 and its daughter isotopes. Peaks and troughs in the graph indicate transitions between isotopes, providing a comprehensive overview of the entire decay chain.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section Heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vskip0.1in
+\noindent {\bf RESULTS:}\\
+
+Initial Decay of Radon-222 (Rn-222):
+
+Radon-222 initiates the decay chain with its characteristic half-life of 3.82 days.
+The population of Radon-222 steadily decreases over time, following the exponential decay curve.
+Formation of Polonium-218 (Po-218):
+
+Polonium-218 is the immediate daughter isotope of Radon-222.
+The population of Polonium-218 rises rapidly as Radon-222 decays, reaching its peak before starting its own decay.
+Branching into Bismuth-214 (Bi-214) and Lead-214 (Pb-214):
+
+Polonium-218 undergoes decay, with 99.98% leading to the formation of Lead-214 and 0.02% resulting in Bismuth-214.
+The population of Lead-214 surpasses that of Bismuth-214, reflecting the branching ratio.
+Further Decay of Bismuth-214 (Bi-214):
+
+Bismuth-214 exhibits a subsequent decay chain, with 99.7% leading to the formation of Lead-207 and 0.3% resulting in Thallium-207.
+The population of Bismuth-214 decreases over time, contributing to the increasing populations of Lead-207 and Thallium-207.
+Completion of Decay Chain:
+
+The decay plot demonstrates the completion of the decay chain, with Lead-207 as the final stable isotope.
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section Heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vskip0.1in
+\noindent {\bf CONCLUSION:}\\
+
+This project has successfully implemented a Python program to simulate the radioactive decay process of Radon-222 and its subsequent decay chain. The simulation, based on mathematical principles of exponential decay and branching ratios, provides a dynamic representation of isotope populations over time. The resulting decay plot serves as a valuable tool for visualizing the temporal evolution of the decay chain and understanding the contributions of each isotope to the overall decay process.
+
+The analysis of the simulation, incorporating mathematical formulations and numerical methods, enhances our comprehension of radioactive decay phenomena. This computational approach not only facilitates the study of specific decay chains but also lays the groundwork for exploring more complex nuclear processes.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}
